@@ -7,6 +7,18 @@ const productos = [
     { nombre: "calentador", precio: 5000 },
 ];
 
+// Funcion para mostrar los productos del carrito //
+
+function mostrarCarrito() {
+    carrito.forEach((carritoFinal) => {
+        console.log(`producto: ${carritoFinal.producto}, unidade: ${carritoFinal.unidades},total a pagar por producto $ 
+    ${carritoFinal.unidades * carritoFinal.precio}`);
+
+        alert(`producto: ${carritoFinal.producto}, unidade: ${carritoFinal.unidades},total a pagar por producto $ 
+    ${carritoFinal.unidades * carritoFinal.precio}`);
+    })
+}
+
 // Carrito, ciclos y seleccion de productos //
 
 let carrito = []
@@ -69,23 +81,14 @@ while (seleccion != "no") {
 
     while (seleccion === "no") {
         alert("gracias por su compra")
-
         break;
     }
 
-    function mostrarCarrito() {
-        carrito.forEach((carritoFinal) => {
-            console.log(`producto: ${carritoFinal.producto}, unidade: ${carritoFinal.unidades},total a pagar por producto $ 
-        ${carritoFinal.unidades * carritoFinal.precio}`);
-
-            alert(`producto: ${carritoFinal.producto}, unidade: ${carritoFinal.unidades},total a pagar por producto $ 
-        ${carritoFinal.unidades * carritoFinal.precio}`);
-        })
-    }
-
-    mostrarCarrito();
-
 }
+
+// Convoca la funcion para mostrar los productos del carrito // 
+
+mostrarCarrito();
 
 // Muestra por alert y consola el total a pagar por su compra //
 
